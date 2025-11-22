@@ -1,0 +1,21 @@
+.gradient-custom {
+background: #6a11cb;
+
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+button{
+    margin-top: 10px;
+}
+
+.Nameuser, .Nameemail, .Namepass {
+    font-size: 20px;
+    margin: 20px 390px 20px 0;
+}
+.next-page {
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+}
