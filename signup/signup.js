@@ -1,8 +1,9 @@
-const username = document.getElementById("Username");
-const email = document.getElementById("Email");
-const password = document.getElementById("password");
+function datasubmit(e) {
+  e.preventDefault();
 
-function datasubmit() {
+  const username = document.getElementById("Username");
+  const email = document.getElementById("Email");
+  const password = document.getElementById("password");
 
   // Pehle local storage se purana data lao
   let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -28,4 +29,8 @@ function datasubmit() {
   // Dobara localStorage me set karo
   localStorage.setItem("users", JSON.stringify(users));
   alert("Signup successful!");
+  window.location.href = "../index.html";
 }
+
+// Attach event listener to form submit
+document.querySelector("form").addEventListener("submit", datasubmit);

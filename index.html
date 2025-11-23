@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Feed</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container py-4">
-    <h3 id="welcomeUser"></h3>
-    <div id="postSection">
-      <textarea id="postText" placeholder="What's on your mind?" class="form-control mb-2"></textarea>
-      <input type="text" id="postImage" placeholder="Image URL (optional)" class="form-control mb-2">
-      <button class="btn btn-primary" id="postBtn">Post</button>
-    </div>
-    <hr>
-    <div id="postsContainer"></div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Feed</title>
+    <!-- Tailwind CSS link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto py-8 px-4">
+      <header class="mb-8">
+        <h1 id="welcomeUser" class="text-3xl font-semibold text-gray-800"></h1>
+      </header>
+      
+      <section id="postSection" class="mb-8 bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto">
+        <textarea
+          id="postText"
+          placeholder="What's on your mind?"
+          class="w-full p-3 border border-gray-300 rounded-md resize-none mb-4 text-gray-900"
+          rows="4"
+        ></textarea>
+        <input
+          type="text"
+          id="postImage"
+          placeholder="Image URL (optional)"
+          class="w-full p-3 border border-gray-300 rounded-md mb-4 text-gray-900"
+        />
+        <button
+          id="postBtn"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md transition"
+        >
+          Post
+        </button>
+      </section>
 
-  <!-- Removed feed.js script reference because file is missing -->
-</body>
+      <hr class="my-8 max-w-3xl mx-auto border-gray-300" />
+
+      <section id="postsContainer" class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Posts will be injected here dynamically -->
+      </section>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
 </html>
